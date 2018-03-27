@@ -1,0 +1,40 @@
+2018-03-27 11:43:47 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_b910d4c1ffb5]]></ToUserName>
+<FromUserName><![CDATA[oEsoP0y5hmmhhYxPbuV_Q87gB5GY]]></FromUserName>
+<CreateTime>1522122227</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://www.weiyu71.com/app/index.php?i=3&c=entry&m=ewei_shopv2&do=mobile&r=live.room&id=1]]></EventKey>
+<MenuId>416711009</MenuId>
+</xml>
+
+2018-03-27 11:43:47 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_b910d4c1ffb5',
+    'fromusername' => 'oEsoP0y5hmmhhYxPbuV_Q87gB5GY',
+    'createtime' => '1522122227',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://www.weiyu71.com/app/index.php?i=3&c=entry&m=ewei_shopv2&do=mobile&r=live.room&id=1',
+    'menuid' => '416711009',
+    'from' => 'oEsoP0y5hmmhhYxPbuV_Q87gB5GY',
+    'to' => 'gh_b910d4c1ffb5',
+    'time' => '1522122227',
+    'type' => 'text',
+    'content' => 'http://www.weiyu71.com/app/index.php?i=3&c=entry&m=ewei_shopv2&do=mobile&r=live.room&id=1',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2018-03-27 11:43:47 response :
+------------
+

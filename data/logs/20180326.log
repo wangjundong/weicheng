@@ -1,0 +1,316 @@
+2018-03-26 08:23:24 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_b910d4c1ffb5]]></ToUserName>
+<FromUserName><![CDATA[oEsoP01R_rqYiVtbEvlsD6bVVVzY]]></FromUserName>
+<CreateTime>1522023804</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://www.weiyu71.com/app/index.php?i=3&c=entry&m=ewei_shopv2&do=mobile]]></EventKey>
+<MenuId>416695376</MenuId>
+</xml>
+
+2018-03-26 08:23:24 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_b910d4c1ffb5',
+    'fromusername' => 'oEsoP01R_rqYiVtbEvlsD6bVVVzY',
+    'createtime' => '1522023804',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://www.weiyu71.com/app/index.php?i=3&c=entry&m=ewei_shopv2&do=mobile',
+    'menuid' => '416695376',
+    'from' => 'oEsoP01R_rqYiVtbEvlsD6bVVVzY',
+    'to' => 'gh_b910d4c1ffb5',
+    'time' => '1522023804',
+    'type' => 'text',
+    'content' => 'http://www.weiyu71.com/app/index.php?i=3&c=entry&m=ewei_shopv2&do=mobile',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2018-03-26 08:23:24 response :
+------------
+
+2018-03-26 08:26:42 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_b910d4c1ffb5]]></ToUserName>
+<FromUserName><![CDATA[oEsoP01R_rqYiVtbEvlsD6bVVVzY]]></FromUserName>
+<CreateTime>1522024002</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://www.weiyu71.com/app/index.php?i=3&c=entry&m=ewei_shopv2&do=mobile]]></EventKey>
+<MenuId>416695376</MenuId>
+</xml>
+
+2018-03-26 08:26:42 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_b910d4c1ffb5',
+    'fromusername' => 'oEsoP01R_rqYiVtbEvlsD6bVVVzY',
+    'createtime' => '1522024002',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://www.weiyu71.com/app/index.php?i=3&c=entry&m=ewei_shopv2&do=mobile',
+    'menuid' => '416695376',
+    'from' => 'oEsoP01R_rqYiVtbEvlsD6bVVVzY',
+    'to' => 'gh_b910d4c1ffb5',
+    'time' => '1522024002',
+    'type' => 'text',
+    'content' => 'http://www.weiyu71.com/app/index.php?i=3&c=entry&m=ewei_shopv2&do=mobile',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2018-03-26 08:26:42 response :
+------------
+
+2018-03-26 11:14:55 SQL Error :
+------------
+String:
+SQL: <br/>select count(*) from `ims_ewei_shop_member_log` log  where 1  and log.uniacid=:uniacid and log.type=:type and log.money<>0 AND log.rechargetype=:rechargetype  and openid IN (SELECT openid FROM ims_ewei_shop_member WHERE uniacid = :uniacid  and (m.realname like :keyword or m.nickname like :keyword or m.mobile like :keyword)) OR openid IN (SELECT CONCAT('sns_wa_',openid_wa) FROM ims_ewei_shop_member WHERE uniacid = :uniacid  and (m.realname like :keyword or m.nickname like :keyword or m.mobile like :keyword))<hr/>Params: <br/>array (
+  ':uniacid' => 3,
+  ':type' => 0,
+  ':keyword' => '%莫格%',
+  ':rechargetype' => 'system',
+)<hr/>SQL Error: <br/>Unknown column 'm.realname' in 'where clause'<hr/>Traces: <br/>file: /framework/class/db.class.php; line: 135; <br />file: /framework/function/pdo.func.php; line: 36; <br />file: /addons/ewei_shopv2/core/web/finance/log.php; line: 218; <br />file: /addons/ewei_shopv2/core/web/finance/log.php; line: 435; <br />file: /addons/ewei_shopv2/core/model/route.php; line: 202; <br />file: /addons/ewei_shopv2/site.php; line: 47; <br />file: /web/source/site/entry.ctrl.php; line: 81; <br />file: /web/index.php; line: 184; <br />
+
+2018-03-26 11:15:04 SQL Error :
+------------
+String:
+SQL: <br/>select count(*) from `ims_ewei_shop_member_log` log  where 1  and log.uniacid=:uniacid and log.type=:type and log.money<>0 AND log.rechargetype=:rechargetype and log.status=1  and openid IN (SELECT openid FROM ims_ewei_shop_member WHERE uniacid = :uniacid  and (m.realname like :keyword or m.nickname like :keyword or m.mobile like :keyword)) OR openid IN (SELECT CONCAT('sns_wa_',openid_wa) FROM ims_ewei_shop_member WHERE uniacid = :uniacid  and (m.realname like :keyword or m.nickname like :keyword or m.mobile like :keyword))<hr/>Params: <br/>array (
+  ':uniacid' => 3,
+  ':type' => 0,
+  ':keyword' => '%莫格%',
+  ':rechargetype' => 'system',
+)<hr/>SQL Error: <br/>Unknown column 'm.realname' in 'where clause'<hr/>Traces: <br/>file: /framework/class/db.class.php; line: 135; <br />file: /framework/function/pdo.func.php; line: 36; <br />file: /addons/ewei_shopv2/core/web/finance/log.php; line: 218; <br />file: /addons/ewei_shopv2/core/web/finance/log.php; line: 435; <br />file: /addons/ewei_shopv2/core/model/route.php; line: 202; <br />file: /addons/ewei_shopv2/site.php; line: 47; <br />file: /web/source/site/entry.ctrl.php; line: 81; <br />file: /web/index.php; line: 184; <br />
+
+2018-03-26 14:35:44 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_b910d4c1ffb5]]></ToUserName>
+<FromUserName><![CDATA[oEsoP01R_rqYiVtbEvlsD6bVVVzY]]></FromUserName>
+<CreateTime>1522046143</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://www.weiyu71.com/app/index.php?i=3&c=entry&m=ewei_shopv2&do=mobile]]></EventKey>
+<MenuId>416695376</MenuId>
+</xml>
+
+2018-03-26 14:35:44 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_b910d4c1ffb5',
+    'fromusername' => 'oEsoP01R_rqYiVtbEvlsD6bVVVzY',
+    'createtime' => '1522046143',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://www.weiyu71.com/app/index.php?i=3&c=entry&m=ewei_shopv2&do=mobile',
+    'menuid' => '416695376',
+    'from' => 'oEsoP01R_rqYiVtbEvlsD6bVVVzY',
+    'to' => 'gh_b910d4c1ffb5',
+    'time' => '1522046143',
+    'type' => 'text',
+    'content' => 'http://www.weiyu71.com/app/index.php?i=3&c=entry&m=ewei_shopv2&do=mobile',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2018-03-26 14:35:44 response :
+------------
+
+2018-03-26 14:37:32 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_b910d4c1ffb5]]></ToUserName>
+<FromUserName><![CDATA[oEsoP0y5hmmhhYxPbuV_Q87gB5GY]]></FromUserName>
+<CreateTime>1522046252</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[unsubscribe]]></Event>
+<EventKey><![CDATA[]]></EventKey>
+</xml>
+
+2018-03-26 14:37:35 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_b910d4c1ffb5]]></ToUserName>
+<FromUserName><![CDATA[oEsoP0y5hmmhhYxPbuV_Q87gB5GY]]></FromUserName>
+<CreateTime>1522046255</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[subscribe]]></Event>
+<EventKey><![CDATA[]]></EventKey>
+</xml>
+
+2018-03-26 14:37:35 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_b910d4c1ffb5',
+    'fromusername' => 'oEsoP0y5hmmhhYxPbuV_Q87gB5GY',
+    'createtime' => '1522046255',
+    'msgtype' => 'event',
+    'event' => 'subscribe',
+    'eventkey' => '',
+    'from' => 'oEsoP0y5hmmhhYxPbuV_Q87gB5GY',
+    'to' => 'gh_b910d4c1ffb5',
+    'time' => '1522046255',
+    'type' => 'text',
+    'redirection' => true,
+    'source' => 'subscribe',
+  ),
+)
+
+2018-03-26 14:37:35 response :
+------------
+
+2018-03-26 14:38:35 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_b910d4c1ffb5]]></ToUserName>
+<FromUserName><![CDATA[oEsoP0y5hmmhhYxPbuV_Q87gB5GY]]></FromUserName>
+<CreateTime>1522046315</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[unsubscribe]]></Event>
+<EventKey><![CDATA[]]></EventKey>
+</xml>
+
+2018-03-26 14:38:38 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_b910d4c1ffb5]]></ToUserName>
+<FromUserName><![CDATA[oEsoP0y5hmmhhYxPbuV_Q87gB5GY]]></FromUserName>
+<CreateTime>1522046318</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[subscribe]]></Event>
+<EventKey><![CDATA[]]></EventKey>
+</xml>
+
+2018-03-26 14:38:38 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_b910d4c1ffb5',
+    'fromusername' => 'oEsoP0y5hmmhhYxPbuV_Q87gB5GY',
+    'createtime' => '1522046318',
+    'msgtype' => 'event',
+    'event' => 'subscribe',
+    'eventkey' => '',
+    'from' => 'oEsoP0y5hmmhhYxPbuV_Q87gB5GY',
+    'to' => 'gh_b910d4c1ffb5',
+    'time' => '1522046318',
+    'type' => 'text',
+    'redirection' => true,
+    'source' => 'subscribe',
+  ),
+)
+
+2018-03-26 14:38:38 response :
+------------
+
+2018-03-26 14:43:05 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_b910d4c1ffb5]]></ToUserName>
+<FromUserName><![CDATA[oEsoP01R_rqYiVtbEvlsD6bVVVzY]]></FromUserName>
+<CreateTime>1522046585</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://www.weiyu71.com/app/index.php?i=3&c=entry&m=ewei_shopv2&do=mobile&r=live.room&id=1]]></EventKey>
+<MenuId>416711009</MenuId>
+</xml>
+
+2018-03-26 14:43:05 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_b910d4c1ffb5',
+    'fromusername' => 'oEsoP01R_rqYiVtbEvlsD6bVVVzY',
+    'createtime' => '1522046585',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://www.weiyu71.com/app/index.php?i=3&c=entry&m=ewei_shopv2&do=mobile&r=live.room&id=1',
+    'menuid' => '416711009',
+    'from' => 'oEsoP01R_rqYiVtbEvlsD6bVVVzY',
+    'to' => 'gh_b910d4c1ffb5',
+    'time' => '1522046585',
+    'type' => 'text',
+    'content' => 'http://www.weiyu71.com/app/index.php?i=3&c=entry&m=ewei_shopv2&do=mobile&r=live.room&id=1',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2018-03-26 14:43:05 response :
+------------
+
+2018-03-26 14:44:26 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_b910d4c1ffb5]]></ToUserName>
+<FromUserName><![CDATA[oEsoP01R_rqYiVtbEvlsD6bVVVzY]]></FromUserName>
+<CreateTime>1522046665</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://www.weiyu71.com/app/index.php?i=3&c=entry&m=ewei_shopv2&do=mobile&r=live.room&id=1]]></EventKey>
+<MenuId>416711009</MenuId>
+</xml>
+
+2018-03-26 14:44:26 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_b910d4c1ffb5',
+    'fromusername' => 'oEsoP01R_rqYiVtbEvlsD6bVVVzY',
+    'createtime' => '1522046665',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://www.weiyu71.com/app/index.php?i=3&c=entry&m=ewei_shopv2&do=mobile&r=live.room&id=1',
+    'menuid' => '416711009',
+    'from' => 'oEsoP01R_rqYiVtbEvlsD6bVVVzY',
+    'to' => 'gh_b910d4c1ffb5',
+    'time' => '1522046665',
+    'type' => 'text',
+    'content' => 'http://www.weiyu71.com/app/index.php?i=3&c=entry&m=ewei_shopv2&do=mobile&r=live.room&id=1',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2018-03-26 14:44:26 response :
+------------
+
